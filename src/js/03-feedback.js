@@ -57,7 +57,7 @@ function onFormSubmit(event) {
     
     console.log(formData);
     //При сабмите формы очищай хранилище и поля формы
-    event.currentTarget.reset();
+    form.reset();
     localStorage.removeItem(FEEDBACK_STORAGE_KEY);
   }
 }
