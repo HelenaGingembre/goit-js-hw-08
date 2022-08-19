@@ -13,13 +13,13 @@ console.log(currentTimePlayerStorage);
 const iframe = document.querySelector('#vimeo-player');    
 const player = new Player(iframe);
 
-    player.on('play', function() {
+player.on('play', function() {
         console.log('played the video!');
     });
     
 
 //4. отслеживаем событие timeupdate - обновление времени воспроизведения.
-const onTimeUpdate = function (data) {
+function  onTimeUpdate(data) {
     localStorage.setItem(CURRENT_TIME_KEY, JSON.stringify(data));
        // data is an object containing properties specific to that event
 };
