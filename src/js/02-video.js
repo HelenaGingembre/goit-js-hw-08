@@ -26,7 +26,7 @@ const onTimeUpdate = function (data) {
 player.on('timeupdate', throttle(onTimeUpdate, 1000));
 
 //6.для того чтобы возобновить воспроизведение с сохраненной позиции при перезагрузке страницы
-player.setCurrentTime(currentTimePlayerStorage.seconds)
+player.setCurrentTime(JSON.parse(currentTimePlayerStorage.seconds))
     .then(function (seconds) {
     // seconds = the actual time that the player seeked to
 }).catch(function(error) {
